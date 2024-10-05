@@ -55,15 +55,17 @@ header{
 @media (min-width: 768px) {
     .header{
         display: grid;
-        grid-template-columns: 8% 50% 42%;
+        grid-template-columns: 10% 53% 37%;
         grid-template-rows: auto auto auto;
+        column-gap: 10px;
     }
 
     .logo-50{
         background-image: url(../img/50-anos.png);
         background-repeat: no-repeat;
-        background-size: cover;
-        height: 95px;
+        background-size: contain;
+        background-position: center;
+        height: 100%;
         position: relative;
         grid-row: 1 / 4;
         grid-column: 1 / 2;
@@ -89,18 +91,24 @@ header{
     flex-direction: column;
 }
 
-.nav a{
+.nav-content{
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
+    padding: 1rem;
     font-weight: 600;
     color: var(--anniversary);
     font-size: 1.6rem;
 }
 
-.nav a:hover{
+.nav-content:hover{
     text-decoration: underline;
     color: var(--darkAnniversary);
+}
+
+.nav--seleccionado{
+    text-decoration: underline;
+    color: var(--grey);
 }
 
 @media (min-width: 768px) {
@@ -117,4 +125,15 @@ header{
     padding: 2rem;
     background-color: #c7c2c6;
     border-radius: 1rem;
+}
+
+.contenedor-texto h2{
+    text-transform: uppercase;
+}
+
+.contenedor-texto p{
+    max-width: 100rem;
+    text-align: justify;
+    margin: auto;
+    padding: 1rem;
 }
